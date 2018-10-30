@@ -3,7 +3,8 @@ node_modules/
 npm-debug.log
 .vscode/*
 wdiomochawesome.json
-build/
+# keeping build to correctly install reporter
+#build/
 screenshots/
 phantom.log
 wdio-mochawesome-report/
