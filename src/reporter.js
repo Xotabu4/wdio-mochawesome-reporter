@@ -38,8 +38,8 @@ class WdioMochawesomeReporter extends events.EventEmitter {
             // runner loop
             for (let cid of Object.keys(this.baseReporter.stats.runners)) {
                 let runnerInfo = this.baseReporter.stats.runners[cid]
-                let sanitizedCapabilities = runnerInfo.sanitizedCapabilities
-
+                //Removed secret mentironing for specific project
+                let sanitizedCapabilities = runnerInfo.sanitizedCapabilities.replace(/\?private_token=.*$/, '')
                 // specs loop
                 for (let specId of Object.keys(runnerInfo.specs)) {
                     let specInfo = runnerInfo.specs[specId]
