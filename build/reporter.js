@@ -74,8 +74,8 @@ var WdioMochawesomeReporter = function (_events$EventEmitter) {
                     var cid = _step.value;
 
                     var runnerInfo = _this.baseReporter.stats.runners[cid];
-                    //Removed secret mentironing for specific project
-                    var sanitizedCapabilities = runnerInfo.sanitizedCapabilities.replace(/\?private_token=.*$/, '');
+                    // Removed secret mentioning for specific project. Slicing copies as new string
+                    var sanitizedCapabilities = runnerInfo.sanitizedCapabilities.slice().replace(/\?private_token=.*$/, '');
                     // specs loop
                     var _iteratorNormalCompletion2 = true;
                     var _didIteratorError2 = false;
